@@ -12,13 +12,12 @@ async function heartbeat(req, res) {
 
 async function check(req, res) {
   let systemInfo = {
-    // cpus: os.cpus(),
-    totalMemory: os.totalmem(),
     freeMemory: os.freemem(),
     hostName: os.hostname(),
-    uptime: os.uptime(),
     operatingSystem: os.version(),
     operatingSystemVersion: os.release(),
+    totalMemory: os.totalmem(),
+    uptime: os.uptime(),
   }
 
   res.status(200).json(systemInfo);
